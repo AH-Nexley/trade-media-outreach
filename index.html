@@ -1,80 +1,58 @@
-<title>Trade Media Outreach</title>
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nexley Outreach — Trade-First Platforms</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;600;700&display=swap">
 <style>
   * { margin:0; padding:0; box-sizing:border-box; }
-  body { background:#0B1623; color:#F6F3EC; font-family:'Inter',-apple-system,sans-serif;
-         padding:30px 16px 90px; }
+  body { background:#0B1623; color:#F6F3EC; font-family:'Inter',-apple-system,sans-serif; padding:30px 16px 90px; }
   .wrap { max-width:720px; margin:0 auto; }
-  h1 { font-family:'Archivo Black',sans-serif; font-size:clamp(24px,5vw,32px);
-       letter-spacing:.3px; margin-bottom:8px; text-wrap:balance; }
-  .sub { color:#C7CDD6; font-size:14px; line-height:1.55; margin-bottom:22px; max-width:60ch; }
-  nav { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:26px; }
-  nav a { color:#C7CDD6; text-decoration:none; font-size:12.5px; font-weight:600;
-          letter-spacing:.4px; border:1px solid rgba(199,205,214,.3); border-radius:999px;
-          padding:7px 13px; }
-  nav a:hover, nav a:focus-visible { color:#0B1623; background:#F6F3EC; outline:none; }
-  .target { background:rgba(246,243,236,.045); border:1px solid rgba(199,205,214,.16);
-            border-radius:14px; padding:20px 20px 10px; margin-bottom:18px;
-            scroll-margin-top:16px; }
+  h1 { font-family:'Archivo Black',sans-serif; font-size:clamp(24px,5vw,32px); letter-spacing:.3px; margin-bottom:8px; text-wrap:balance; }
+  h3.sect { font-family:'Archivo Black',sans-serif; font-size:15px; letter-spacing:.8px; color:#C7CDD6; margin:26px 0 12px; }
+  .sub { color:#C7CDD6; font-size:14px; line-height:1.55; margin-bottom:18px; max-width:62ch; }
+  .pages { display:flex; gap:8px; margin-bottom:8px; flex-wrap:wrap; }
+  .pages a { color:#C7CDD6; text-decoration:none; font-size:13px; font-weight:700; letter-spacing:.4px; border:1px solid rgba(199,205,214,.3); border-radius:999px; padding:9px 16px; }
+  .pages a.on { color:#0B1623; background:#FF6B1A; border-color:#FF6B1A; }
+  .pages a:hover:not(.on), .pages a:focus-visible { color:#0B1623; background:#F6F3EC; outline:none; }
+  .target { background:rgba(246,243,236,.045); border:1px solid rgba(199,205,214,.16); border-radius:14px; padding:20px 20px 10px; margin-bottom:18px; }
   .target h2 { font-family:'Archivo Black',sans-serif; font-size:19px; margin-bottom:3px; }
-  .angle { color:#C7CDD6; font-size:13px; line-height:1.55; margin-bottom:12px; max-width:62ch; }
+  .tag { display:inline-block; font-size:11px; font-weight:700; letter-spacing:.6px; color:#0B1623; background:#C7CDD6; border-radius:5px; padding:3px 8px; margin-left:8px; vertical-align:2px; }
+  .tag.best { background:#25D366; }
+  .angle { color:#C7CDD6; font-size:13px; line-height:1.55; margin-bottom:12px; max-width:64ch; }
   .links { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:6px; }
-  .links a { color:#F6F3EC; text-decoration:none; font-size:12.5px; font-weight:700;
-             background:rgba(199,205,214,.14); border-radius:8px; padding:8px 12px; }
+  .links a { color:#F6F3EC; text-decoration:none; font-size:12.5px; font-weight:700; background:rgba(199,205,214,.14); border-radius:8px; padding:8px 12px; }
   .links a:hover, .links a:focus-visible { background:rgba(199,205,214,.28); outline:none; }
   details { border-top:1px solid rgba(199,205,214,.14); padding:11px 0; }
-  summary { cursor:pointer; font-weight:700; font-size:14px; color:#C7CDD6;
-            list-style:none; display:flex; justify-content:space-between; align-items:center; }
+  summary { cursor:pointer; font-weight:700; font-size:14px; color:#C7CDD6; list-style:none; display:flex; justify-content:space-between; align-items:center; }
   summary::-webkit-details-marker { display:none; }
   summary::after { content:'+'; color:#FF6B1A; font-size:18px; font-weight:400; }
   details[open] summary::after { content:'\2212'; }
-  .msg { background:rgba(11,22,35,.8); border:1px solid rgba(199,205,214,.1);
-         border-radius:10px; padding:14px 15px; margin:10px 0 8px; font-size:14px;
-         line-height:1.6; white-space:pre-wrap; }
+  .msg { background:rgba(11,22,35,.8); border:1px solid rgba(199,205,214,.1); border-radius:10px; padding:14px 15px; margin:10px 0 8px; font-size:14px; line-height:1.6; white-space:pre-wrap; }
   .subj { font-size:12px; color:#C7CDD6; letter-spacing:.4px; margin-top:8px; }
   .subj b { color:#F6F3EC; }
-  button.copy { background:#FF6B1A; color:#0B1623; border:none; border-radius:8px;
-                padding:9px 16px; font-weight:700; font-size:13px; cursor:pointer;
-                font-family:inherit; margin:0 0 6px; }
+  button.copy { background:#FF6B1A; color:#0B1623; border:none; border-radius:8px; padding:9px 16px; font-weight:700; font-size:13px; cursor:pointer; font-family:inherit; margin:0 6px 6px 0; }
   button.copy:focus-visible { outline:2px solid #F6F3EC; outline-offset:2px; }
   button.copy.done { background:#25D366; }
-</style>
-
+  a.mailbtn { display:inline-block; color:#0B1623; background:#F6F3EC; text-decoration:none; border-radius:8px; padding:9px 14px; font-weight:700; font-size:13px; margin:0 0 6px; }
+</style></head><body>
 <div class="wrap">
-<h1>Trade media outreach</h1>
-<p class="sub">Six trade-first platforms, written for what each one actually is. Open the
-channel, tap the link to land on their page, copy the message, make it yours before it
-goes. Where a social handle isn't verified, the button goes to their site instead of a
-guess. Nothing here sends itself.</p>
+<h1>Trade-first platforms</h1>
+<p class="sub">The channels tradespeople actually watch and read. Original six up top, then the creators and the vertical trade press (researched 27 Aug). Every email shown was openly published by the outlet, none guessed; where none exists the DM or contact page is the route. Copy, make it yours, send.</p>
+<nav class="pages"><a class="on" href="index.html">Trade-first platforms</a><a href="press.html">Press</a><a href="podcasts.html">Podcasts &amp; shows</a></nav>
 
-<nav>
-  <a href="#fixradio">Fix Radio</a><a href="#ott">On The Tools</a>
-  <a href="#legends">Trade Legends</a><a href="#gasapp">Gas App UK</a>
-  <a href="#efixx">eFIXX</a><a href="#skillbuilder">Skill Builder</a>
-</nav>
+<h3 class="sect">THE ORIGINAL SIX</h3>
 
-<div class="target" id="fixradio">
-  <h2>Fix Radio</h2>
-  <p class="angle">The builders' station, national DAB, the biggest trade radio audience
-  in the country. Clive Holland (ex Cowboy Trap) holds the 12 to 3 slot; the Bald
-  Builders Breakfast won at the Radio Academy awards. They run sponsor and guest slots
-  constantly. Ask = guest conversation about AI in the trades. Commercial arm is Fix Media.</p>
-  <div class="links">
-    <a href="https://www.instagram.com/fixradiouk/" target="_blank" rel="noopener">Instagram ↗</a>
-    <a href="https://www.facebook.com/FixRadioUK/" target="_blank" rel="noopener">Facebook ↗</a>
-    <a href="https://fixmedia.co.uk/" target="_blank" rel="noopener">Partnerships (Fix Media) ↗</a>
-  </div>
-  <details><summary>Instagram DM</summary>
-    <div class="msg" id="m1">Hiya team. Kade here, 13 years in construction before I built Nexley, an AI employee that runs the back office for UK trades over WhatsApp. The AI conversation is happening in every van right now and half of what's said is rubbish. I'd love to come on and have the honest version of it, Clive's slot or wherever it fits. We're getting an accountant fired a week at the minute, so there's plenty to get into. Who books your guests?</div>
-    <button class="copy" data-t="m1">Copy</button>
-  </details>
-  <details><summary>Facebook message</summary>
-    <div class="msg" id="m2">Hiya team. Kade from Nexley here, 13 years in construction before this. We build an AI employee that runs the back office for trade firms, and the stories coming out of it are radio material. An accountant fired a week, fourteen grand found in VAT off one voice note, owners asking their business questions like it's a person. Happy to come on and talk about it straight, pushback welcome. Who's the right person for guests?</div>
-    <button class="copy" data-t="m2">Copy</button>
-  </details>
-  <details><summary>Email (via the Fix Media contact page)</summary>
-    <p class="subj">Subject: <b>The honest AI conversation, for the van</b></p>
-    <div class="msg" id="m3">Hiya team,
+<div class="target" id="fixradio"><h2>Fix Radio</h2>
+<p class="angle">The builders' station, national DAB, the biggest trade radio audience in the country. Clive Holland (ex Cowboy Trap) holds the 12 to 3 slot; the Bald Builders Breakfast won at the Radio Academy awards. Ask = guest conversation about AI in the trades. Commercial arm is Fix Media.</p>
+<div class="links"><a href="https://www.instagram.com/fixradiouk/" target="_blank" rel="noopener">Instagram ↗</a><a href="https://www.facebook.com/FixRadioUK/" target="_blank" rel="noopener">Facebook ↗</a><a href="https://fixmedia.co.uk/" target="_blank" rel="noopener">Partnerships ↗</a></div>
+<details><summary>Instagram DM</summary>
+<div class="msg" id="m1">Hiya team. Kade here, 13 years in construction before I built Nexley, an AI employee that runs the back office for UK trades over WhatsApp. The AI conversation is happening in every van right now and half of what's said is rubbish. I'd love to come on and have the honest version of it, Clive's slot or wherever it fits. We're getting an accountant fired a week at the minute, so there's plenty to get into. Who books your guests?</div>
+<button class="copy" data-t="m1">Copy</button></details>
+<details><summary>Facebook message</summary>
+<div class="msg" id="m2">Hiya team. Kade from Nexley here, 13 years in construction before this. We build an AI employee that runs the back office for trade firms, and the stories coming out of it are radio material. An accountant fired a week, fourteen grand found in VAT off one voice note, owners asking their business questions like it's a person. Happy to come on and talk about it straight, pushback welcome. Who's the right person for guests?</div>
+<button class="copy" data-t="m2">Copy</button></details>
+<details><summary>Email (via Fix Media)</summary>
+<p class="subj">Subject: <b>The honest AI conversation, for the van</b></p>
+<div class="msg" id="m3">Hiya team,
 
 Kade Dillon here. 13 years in construction, and I now run Nexley, an AI employee that does the back office for UK trade businesses over WhatsApp. Quotes, invoices, chasing money, the lot.
 
@@ -86,32 +64,20 @@ Worth a conversation?
 
 Kade
 nexley.ai</div>
-    <button class="copy" data-t="m3">Copy</button>
-  </details>
-</div>
+<button class="copy" data-t="m3">Copy</button></details></div>
 
-<div class="target" id="ott">
-  <h2>On The Tools</h2>
-  <p class="angle">The biggest online trade community in the country, 3M+ followers,
-  built on real site humour since 2014. Lee Wilcox runs it as a full media company with
-  brand campaigns and their own awards. Ask = paid or earned content collab; reaction
-  content is their native format. Facebook is their home turf.</p>
-  <div class="links">
-    <a href="https://www.instagram.com/onthetools/" target="_blank" rel="noopener">Instagram ↗</a>
-    <a href="https://www.facebook.com/onthetools/" target="_blank" rel="noopener">Facebook ↗</a>
-    <a href="https://www.onthetools.tv/" target="_blank" rel="noopener">Site / partnerships ↗</a>
-  </div>
-  <details><summary>Instagram DM</summary>
-    <div class="msg" id="m4">Hiya team. Kade here, 13 years on sites before I built Nexley, an AI employee that runs the back office for trade businesses on WhatsApp. You've built the biggest trade audience in the country off real site reactions, and honestly, a tradesman watching his quotes and invoices sort themselves off one voice note gets exactly that reaction. Feels like a collab that makes itself. Who's best on partnerships?</div>
-    <button class="copy" data-t="m4">Copy</button>
-  </details>
-  <details><summary>Facebook message</summary>
-    <div class="msg" id="m5">Hiya team. Kade from Nexley, 13 years in construction before this. We build an AI employee that does a trade firm's admin over WhatsApp, and the first time an owner sees it chase a late payment on its own is proper reaction content. Your audience is exactly who it's built for and we talk about it their way, no hype. Keen to sort a collab if there's someone on partnerships I should speak to?</div>
-    <button class="copy" data-t="m5">Copy</button>
-  </details>
-  <details><summary>Email (via the site contact page)</summary>
-    <p class="subj">Subject: <b>Collab: a tradesman reacts to his admin doing itself</b></p>
-    <div class="msg" id="m6">Hiya team,
+<div class="target" id="ott"><h2>On The Tools</h2>
+<p class="angle">The biggest online trade community in the country, 3M+ followers, built on real site humour since 2014. Lee Wilcox runs it as a full media company with brand campaigns and their own awards. Ask = content collab; reaction content is their native format. Facebook is home turf.</p>
+<div class="links"><a href="https://www.instagram.com/onthetools/" target="_blank" rel="noopener">Instagram ↗</a><a href="https://www.facebook.com/onthetools/" target="_blank" rel="noopener">Facebook ↗</a><a href="https://www.onthetools.tv/" target="_blank" rel="noopener">Site ↗</a></div>
+<details><summary>Instagram DM</summary>
+<div class="msg" id="m4">Hiya team. Kade here, 13 years on sites before I built Nexley, an AI employee that runs the back office for trade businesses on WhatsApp. You've built the biggest trade audience in the country off real site reactions, and honestly, a tradesman watching his quotes and invoices sort themselves off one voice note gets exactly that reaction. Feels like a collab that makes itself. Who's best on partnerships?</div>
+<button class="copy" data-t="m4">Copy</button></details>
+<details><summary>Facebook message</summary>
+<div class="msg" id="m5">Hiya team. Kade from Nexley, 13 years in construction before this. We build an AI employee that does a trade firm's admin over WhatsApp, and the first time an owner sees it chase a late payment on its own is proper reaction content. Your audience is exactly who it's built for and we talk about it their way, no hype. Keen to sort a collab if there's someone on partnerships I should speak to?</div>
+<button class="copy" data-t="m5">Copy</button></details>
+<details><summary>Email (via the site)</summary>
+<p class="subj">Subject: <b>Collab: a tradesman reacts to his admin doing itself</b></p>
+<div class="msg" id="m6">Hiya team,
 
 Kade Dillon, founder of Nexley. 13 years in construction, and we now build an AI employee that runs the back office for UK trade businesses over WhatsApp.
 
@@ -123,30 +89,20 @@ Who's the right person to talk formats and numbers with?
 
 Kade
 nexley.ai</div>
-    <button class="copy" data-t="m6">Copy</button>
-  </details>
-</div>
+<button class="copy" data-t="m6">Copy</button></details></div>
 
-<div class="target" id="legends">
-  <h2>Trade Legends</h2>
-  <p class="angle">The UK's number 1 weekly trades podcast, hosted by Big Al and Mark.
-  Guests tell real stories: life on the tools, pay, mental health, running a business.
-  Roger Bisby has been on. Ask = guest episode. DM or the site contact form.</p>
-  <div class="links">
-    <a href="https://www.instagram.com/tradelegends/" target="_blank" rel="noopener">Instagram ↗</a>
-    <a href="https://tradelegends.uk/" target="_blank" rel="noopener">Site / contact ↗</a>
-  </div>
-  <details><summary>Instagram DM</summary>
-    <div class="msg" id="m7">Hiya Al, hiya Mark. Kade here. 13 years in construction, then I went the other way and built Nexley, an AI employee that runs the back office for trade businesses. You two get the real running-a-business stuff out of guests better than anyone, and that's exactly where this story lives. Owners finding out what they actually make, accountants getting fired weekly, lads back on the tools instead of the laptop. Room for that one on the pod?</div>
-    <button class="copy" data-t="m7">Copy</button>
-  </details>
-  <details><summary>Facebook message</summary>
-    <div class="msg" id="m8">Hiya team. Kade from Nexley here, 13 years in construction before building an AI company for the trades. I think there's a proper episode in it, sites to software, why the trades come out of the AI shift on top, and what happens the first time an owner asks his business a question and it answers. Happy to be pushed on all of it. Who sorts your guests?</div>
-    <button class="copy" data-t="m8">Copy</button>
-  </details>
-  <details><summary>Email (via the site contact form)</summary>
-    <p class="subj">Subject: <b>Guest idea: 13 years on sites, now building AI for the trades</b></p>
-    <div class="msg" id="m9">Hiya Al and Mark,
+<div class="target" id="legends"><h2>Trade Legends</h2>
+<p class="angle">The UK's number 1 weekly trades podcast, hosted by Big Al and Mark. Guests tell real stories: life on the tools, pay, mental health, running a business. Ask = guest episode. DM or the site contact form.</p>
+<div class="links"><a href="https://www.instagram.com/tradelegends/" target="_blank" rel="noopener">Instagram ↗</a><a href="https://tradelegends.uk/" target="_blank" rel="noopener">Site ↗</a></div>
+<details><summary>Instagram DM</summary>
+<div class="msg" id="m7">Hiya Al, hiya Mark. Kade here. 13 years in construction, then I went the other way and built Nexley, an AI employee that runs the back office for trade businesses. You two get the real running-a-business stuff out of guests better than anyone, and that's exactly where this story lives. Owners finding out what they actually make, accountants getting fired weekly, lads back on the tools instead of the laptop. Room for that one on the pod?</div>
+<button class="copy" data-t="m7">Copy</button></details>
+<details><summary>Facebook message</summary>
+<div class="msg" id="m8">Hiya team. Kade from Nexley here, 13 years in construction before building an AI company for the trades. I think there's a proper episode in it, sites to software, why the trades come out of the AI shift on top, and what happens the first time an owner asks his business a question and it answers. Happy to be pushed on all of it. Who sorts your guests?</div>
+<button class="copy" data-t="m8">Copy</button></details>
+<details><summary>Email (via the site form)</summary>
+<p class="subj">Subject: <b>Guest idea: 13 years on sites, now building AI for the trades</b></p>
+<div class="msg" id="m9">Hiya Al and Mark,
 
 Kade Dillon here. I did 13 years in construction, and I now run Nexley, an AI employee that does the back office for UK trade businesses over WhatsApp.
 
@@ -158,30 +114,20 @@ If it fits the run of shows, I'd love to come on.
 
 Kade
 nexley.ai</div>
-    <button class="copy" data-t="m9">Copy</button>
-  </details>
-</div>
+<button class="copy" data-t="m9">Copy</button></details></div>
 
-<div class="target" id="gasapp">
-  <h2>Gas App UK</h2>
-  <p class="angle">The gas engineers' app, 80,000+ members, built by engineers. Famous
-  for the Horror Show galleries (worst rogue work of the month). They already have
-  quoting tools in-app, so the pitch is a member story and feature, not a tool pitch.</p>
-  <div class="links">
-    <a href="https://www.instagram.com/gasappuk/" target="_blank" rel="noopener">Instagram ↗</a>
-    <a href="https://www.gasapp.co.uk/" target="_blank" rel="noopener">Site / contact ↗</a>
-  </div>
-  <details><summary>Instagram DM</summary>
-    <div class="msg" id="m10">Hiya team. Kade here, 13 years in construction, now building Nexley, an AI employee that runs the back office for trade businesses over WhatsApp. We see the paperwork version of your Horror Show every week, six-figure firms run off a notes app and a shoebox of receipts. Your 80,000 engineers are exactly who we built it for. Worth a chat about putting the story in front of the members?</div>
-    <button class="copy" data-t="m10">Copy</button>
-  </details>
-  <details><summary>Facebook message</summary>
-    <div class="msg" id="m11">Hiya team. Kade from Nexley, 13 years in construction before this. We build an AI employee that handles the office side for trade firms, the after-hours invoicing and chasing that eats an engineer's evenings. One of our clients found fourteen grand owed back on VAT from a single voice note. Reckon your members would want to hear that one. Who's best to talk features or collabs with?</div>
-    <button class="copy" data-t="m11">Copy</button>
-  </details>
-  <details><summary>Email (via the site contact page)</summary>
-    <p class="subj">Subject: <b>A story for the members: the paperwork Horror Show</b></p>
-    <div class="msg" id="m12">Hiya team,
+<div class="target" id="gasapp"><h2>Gas App UK</h2>
+<p class="angle">The gas engineers' app, 80,000+ members, built by engineers. Famous for the Horror Show galleries (worst rogue work of the month). They already have quoting tools in-app, so the pitch is a member story and feature, not a tool pitch.</p>
+<div class="links"><a href="https://www.instagram.com/gasappuk/" target="_blank" rel="noopener">Instagram ↗</a><a href="https://www.gasapp.co.uk/" target="_blank" rel="noopener">Site ↗</a></div>
+<details><summary>Instagram DM</summary>
+<div class="msg" id="m10">Hiya team. Kade here, 13 years in construction, now building Nexley, an AI employee that runs the back office for trade businesses over WhatsApp. We see the paperwork version of your Horror Show every week, six-figure firms run off a notes app and a shoebox of receipts. Your 80,000 engineers are exactly who we built it for. Worth a chat about putting the story in front of the members?</div>
+<button class="copy" data-t="m10">Copy</button></details>
+<details><summary>Facebook message</summary>
+<div class="msg" id="m11">Hiya team. Kade from Nexley, 13 years in construction before this. We build an AI employee that handles the office side for trade firms, the after-hours invoicing and chasing that eats an engineer's evenings. One of our clients found fourteen grand owed back on VAT from a single voice note. Reckon your members would want to hear that one. Who's best to talk features or collabs with?</div>
+<button class="copy" data-t="m11">Copy</button></details>
+<details><summary>Email (via the site)</summary>
+<p class="subj">Subject: <b>A story for the members: the paperwork Horror Show</b></p>
+<div class="msg" id="m12">Hiya team,
 
 Kade Dillon, founder of Nexley. 13 years in construction, and we now build an AI employee that runs the back office for UK trade businesses over WhatsApp.
 
@@ -193,31 +139,20 @@ Who's the right person to talk it through with?
 
 Kade
 nexley.ai</div>
-    <button class="copy" data-t="m12">Copy</button>
-  </details>
-</div>
+<button class="copy" data-t="m12">Copy</button></details></div>
 
-<div class="target" id="efixx">
-  <h2>eFIXX</h2>
-  <p class="angle">The electricians' channel. Their own line: a bit like Top Gear, but
-  for electricians. Product reviews, know-how, CPD. Gordon Routledge publishes; Gary
-  Hayers and Joe Robinson edit. Ask = road-test feature, education angle.</p>
-  <div class="links">
-    <a href="https://www.instagram.com/efixx_insta/" target="_blank" rel="noopener">Instagram ↗</a>
-    <a href="https://www.facebook.com/p/EFIXX-100063595862417/" target="_blank" rel="noopener">Facebook ↗</a>
-    <a href="https://www.efixx.co.uk/contact" target="_blank" rel="noopener">Contact page ↗</a>
-  </div>
-  <details><summary>Instagram DM</summary>
-    <div class="msg" id="m13">Hiya team. Kade here, 13 years in construction before building Nexley, an AI employee that runs the back office for trade businesses. You call yourselves Top Gear for electricians, so road test us. Put it through a real sparky's week on camera, quotes, invoices, chasing, the CIS and VAT position, and say exactly what you find. Plenty of our heaviest users are electricians, so we'll back the result either way. Who do I talk to?</div>
-    <button class="copy" data-t="m13">Copy</button>
-  </details>
-  <details><summary>Facebook message</summary>
-    <div class="msg" id="m14">Hiya team. Kade from Nexley here, 13 years in construction before this. We build an AI employee that runs the office side for trade firms, and electricians are some of our heaviest users. I think there's a genuinely useful piece for your audience in what this class of tool really does and where it falls short, tested properly, your way. Who's best to talk to about a feature?</div>
-    <button class="copy" data-t="m14">Copy</button>
-  </details>
-  <details><summary>Email (via the contact page)</summary>
-    <p class="subj">Subject: <b>Road test: what AI actually does for a sparky's business</b></p>
-    <div class="msg" id="m15">Hiya team,
+<div class="target" id="efixx"><h2>eFIXX</h2>
+<p class="angle">The electricians' channel. Their own line: a bit like Top Gear, but for electricians. Product reviews, know-how, CPD. Gordon Routledge publishes; Gary Hayers and Joe Robinson edit. Ask = road-test feature.</p>
+<div class="links"><a href="https://www.instagram.com/efixx_insta/" target="_blank" rel="noopener">Instagram ↗</a><a href="https://www.facebook.com/p/EFIXX-100063595862417/" target="_blank" rel="noopener">Facebook ↗</a><a href="https://www.efixx.co.uk/contact" target="_blank" rel="noopener">Contact ↗</a></div>
+<details><summary>Instagram DM</summary>
+<div class="msg" id="m13">Hiya team. Kade here, 13 years in construction before building Nexley, an AI employee that runs the back office for trade businesses. You call yourselves Top Gear for electricians, so road test us. Put it through a real sparky's week on camera, quotes, invoices, chasing, the CIS and VAT position, and say exactly what you find. Plenty of our heaviest users are electricians, so we'll back the result either way. Who do I talk to?</div>
+<button class="copy" data-t="m13">Copy</button></details>
+<details><summary>Facebook message</summary>
+<div class="msg" id="m14">Hiya team. Kade from Nexley here, 13 years in construction before this. We build an AI employee that runs the office side for trade firms, and electricians are some of our heaviest users. I think there's a genuinely useful piece for your audience in what this class of tool really does and where it falls short, tested properly, your way. Who's best to talk to about a feature?</div>
+<button class="copy" data-t="m14">Copy</button></details>
+<details><summary>Email (via the contact page)</summary>
+<p class="subj">Subject: <b>Road test: what AI actually does for a sparky's business</b></p>
+<div class="msg" id="m15">Hiya team,
 
 Kade Dillon here, founder of Nexley. 13 years in construction, and we now build an AI employee that runs the back office for UK trade businesses over WhatsApp.
 
@@ -229,30 +164,20 @@ If that fits the channel, I'd love to set it up.
 
 Kade
 nexley.ai</div>
-    <button class="copy" data-t="m15">Copy</button>
-  </details>
-</div>
+<button class="copy" data-t="m15">Copy</button></details></div>
 
-<div class="target" id="skillbuilder">
-  <h2>Skill Builder</h2>
-  <p class="angle">Roger Bisby's channel, made with Dylan. Roger was the building expert
-  on Watchdog and Rogue Traders, and the channel runs on straight-talking reviews.
-  Ask = let Roger try to break it on camera. Site has the contact route.</p>
-  <div class="links">
-    <a href="https://www.youtube.com/c/SkillBuilder" target="_blank" rel="noopener">YouTube ↗</a>
-    <a href="https://skill-builder.uk/" target="_blank" rel="noopener">Site / contact ↗</a>
-  </div>
-  <details><summary>Instagram DM</summary>
-    <div class="msg" id="m16">Hiya team. Kade here, 13 years in construction, now I build Nexley, an AI employee for UK trade businesses. Roger spent years catching rogue work on Watchdog and Rogue Traders, and AI aimed at the trades is full of exactly that right now. So here's the offer, let him try to break ours on camera. Real jobs, real numbers, no script and no conditions from us. If it falls over, that's the video. Interested?</div>
-    <button class="copy" data-t="m16">Copy</button>
-  </details>
-  <details><summary>Facebook message</summary>
-    <div class="msg" id="m17">Hiya team. Kade from Nexley, 13 years in construction before this. We build an AI employee that does the back office for trade firms, and I'd genuinely value the Skill Builder treatment, Roger testing it the way he tests everything else, live and unscripted. There's a lot of AI rubbish sold at the trades right now and honest scrutiny sorts it fast. Who do I talk to about setting it up?</div>
-    <button class="copy" data-t="m17">Copy</button>
-  </details>
-  <details><summary>Email (via the site contact route)</summary>
-    <p class="subj">Subject: <b>Try to break it on camera</b></p>
-    <div class="msg" id="m18">Hiya Roger and team,
+<div class="target" id="skillbuilder"><h2>Skill Builder</h2>
+<p class="angle">Roger Bisby's channel, made with Dylan. Roger was the building expert on Watchdog and Rogue Traders, and the channel runs on straight-talking reviews. Ask = let Roger try to break it on camera.</p>
+<div class="links"><a href="https://www.youtube.com/c/SkillBuilder" target="_blank" rel="noopener">YouTube ↗</a><a href="https://skill-builder.uk/" target="_blank" rel="noopener">Site ↗</a></div>
+<details><summary>Instagram DM</summary>
+<div class="msg" id="m16">Hiya team. Kade here, 13 years in construction, now I build Nexley, an AI employee for UK trade businesses. Roger spent years catching rogue work on Watchdog and Rogue Traders, and AI aimed at the trades is full of exactly that right now. So here's the offer, let him try to break ours on camera. Real jobs, real numbers, no script and no conditions from us. If it falls over, that's the video. Interested?</div>
+<button class="copy" data-t="m16">Copy</button></details>
+<details><summary>Facebook message</summary>
+<div class="msg" id="m17">Hiya team. Kade from Nexley, 13 years in construction before this. We build an AI employee that does the back office for trade firms, and I'd genuinely value the Skill Builder treatment, Roger testing it the way he tests everything else, live and unscripted. There's a lot of AI rubbish sold at the trades right now and honest scrutiny sorts it fast. Who do I talk to about setting it up?</div>
+<button class="copy" data-t="m17">Copy</button></details>
+<details><summary>Email (via the site)</summary>
+<p class="subj">Subject: <b>Try to break it on camera</b></p>
+<div class="msg" id="m18">Hiya Roger and team,
 
 Kade Dillon, founder of Nexley. 13 years in construction, and now we build an AI employee that runs the back office for UK trade businesses over WhatsApp.
 
@@ -264,11 +189,274 @@ Interested?
 
 Kade
 nexley.ai</div>
-    <button class="copy" data-t="m18">Copy</button>
-  </details>
-</div>
-</div>
+<button class="copy" data-t="m18">Copy</button></details></div>
 
+<h3 class="sect">CREATORS</h3>
+
+<div class="target"><h2>Artisan Electrics <span class="tag best">STRONG FIT</span></h2>
+<p class="angle">Jordan Farley's channel, 300k+ subscribers, run from his real Cambridge electrical firm (solar, EV, batteries). He actively makes business-of-the-trade content, pricing, marketing, systems, so a real-numbers back-office trial is native to his format.</p>
+<div class="links"><a href="https://www.youtube.com/@artisanelectrics" target="_blank" rel="noopener">YouTube ↗</a><a href="https://www.instagram.com/artisanelectrics" target="_blank" rel="noopener">Instagram ↗</a><a href="https://artisanelectrics.co.uk/contact" target="_blank" rel="noopener">Contact ↗</a></div>
+<details><summary>Email — (contact@artisanelectrics.co.uk)</summary>
+<p class="subj">Subject: <b>Run your back office on it for a week, film what happens</b></p>
+<div class="msg" id="t1">Hiya Jordan,
+
+Kade Dillon, founder of Nexley, an AI employee that runs the back office for trade businesses over WhatsApp. 13 years in construction before I built it.
+
+You make the best business-of-the-trade content in the country, so here's a format built for it: plug Nexley into a week of Artisan's real admin, the quotes, invoices and payment chasing, and film exactly what it does and where it falls short. We're getting an accountant fired a week at the minute, and your audience will have strong opinions about that.
+
+If it doesn't earn its keep on camera, that's the video, and we'll take it. Happy to talk formats and commercials however suits.
+
+Worth a conversation?
+
+Kade
+nexley.ai</div>
+<button class="copy" data-t="t1">Copy</button><a class="mailbtn" href="mailto:contact@artisanelectrics.co.uk?subject=Run%20your%20back%20office%20on%20it%20for%20a%20week%2C%20film%20what%20happens">Open email ↗</a></details>
+<details><summary>Instagram DM</summary>
+<div class="msg" id="t2">Hiya Jordan. Kade here, 13 years in construction before building Nexley, an AI employee that runs a trade firm's back office over WhatsApp. Your business-of-the-trade videos are the best out there, so the idea is simple: run Artisan's real admin through it for a week and film exactly what happens, good and bad. If it flops, that's the video. Emailed the details to the office, but happy to talk here. Interested?</div>
+<button class="copy" data-t="t2">Copy</button></details></div>
+
+<div class="target"><h2>Plumberparts</h2>
+<p class="angle">James Lawrence's plumbing channel, ~415k subscribers, one of the UK's biggest; pro and DIY tutorials plus his interview channel Life In Deep. Two asks in one: a road-test integration, and Kade as a Life In Deep guest.</p>
+<div class="links"><a href="https://www.youtube.com/channel/UCwF8vOEatNvJUiXXJtDx-zA" target="_blank" rel="noopener">YouTube ↗</a><a href="https://www.instagram.com/plumberparts" target="_blank" rel="noopener">Instagram ↗</a><a href="https://www.plumberparts.co.uk" target="_blank" rel="noopener">Site ↗</a></div>
+<details><summary>Email — (info@plumberparts.co.uk)</summary>
+<p class="subj">Subject: <b>An honest road test for the channel, and a story for Life In Deep</b></p>
+<div class="msg" id="t3">Hiya James,
+
+Kade Dillon, founder of Nexley, an AI employee that runs the back office for UK trade businesses over WhatsApp. 13 years in construction before building it.
+
+Two ideas, take either or both. One: a road-test segment for Plumberparts, give it a working plumber's real week of quoting, invoicing and chasing, and say exactly what it gets right and wrong, no approval from us over the edit. Two: the Life In Deep conversation, 13 years on sites to building an AI company for the same industry, including the uncomfortable bits like the accountant we get fired every week.
+
+Happy to talk commercials on the first and just turn up for the second.
+
+What do you reckon?
+
+Kade
+nexley.ai</div>
+<button class="copy" data-t="t3">Copy</button><a class="mailbtn" href="mailto:info@plumberparts.co.uk?subject=An%20honest%20road%20test%20for%20the%20channel%2C%20and%20a%20story%20for%20Life%20In%20Deep">Open email ↗</a></details>
+<details><summary>Instagram DM</summary>
+<div class="msg" id="t4">Hiya James. Kade here, 13 years in construction before building Nexley, an AI employee that does a plumber's paperwork over WhatsApp. Sent the office an email with two ideas: an honest road test for the channel, and the sites-to-software story for Life In Deep. Either works, both are better. Who picks your guests?</div>
+<button class="copy" data-t="t4">Copy</button></details></div>
+
+<div class="target"><h2>PB Plumber <span class="tag">DM ONLY</span></h2>
+<p class="angle">Peter Booth, third-generation plumber running the family firm near Loughborough; ~54k YouTube, ~80k Instagram. Jobbing-plumber vlogs, straight talker, exactly the one-van audience. No published email, so the DM is the route.</p>
+<div class="links"><a href="https://www.instagram.com/pbplumber" target="_blank" rel="noopener">Instagram ↗</a><a href="https://www.youtube.com/@PBPlumber" target="_blank" rel="noopener">YouTube ↗</a><a href="https://www.tiktok.com/@pbplumber" target="_blank" rel="noopener">TikTok ↗</a></div>
+<details><summary>Instagram DM</summary>
+<div class="msg" id="t5">Hiya Pete. Kade here, 13 years in construction before building Nexley, an AI employee that runs a trade firm's paperwork over WhatsApp. Your audience is exactly who it's built for, one van, evenings full of quotes and invoices. The idea: an honest road test on the channel. Give it a real week of the family firm's admin and say exactly what it gets right and what it gets wrong. If it flops, that's the video and we'll wear it. One of our clients found fourteen grand owed back on VAT from a single voice note, so there's a story either way. Fancy it?</div>
+<button class="copy" data-t="t5">Copy</button></details></div>
+
+<div class="target"><h2>Thomas Nagy <span class="tag">SOFT TOUCH</span></h2>
+<p class="angle">London electrician YouTuber (~95k subs) turned contractor MD, but the channel posted a goodbye video in August and he left the tools last year. Not a media pitch: one founder-to-founder note, more customer or case-study prospect than collab.</p>
+<div class="links"><a href="https://www.youtube.com/channel/UC6EJTy6p58ZW16PEljSn4Qw" target="_blank" rel="noopener">YouTube ↗</a><a href="https://thomasnagy.uk/about/" target="_blank" rel="noopener">Company site ↗</a></div>
+<details><summary>Email — (info@thomasnagy.uk)</summary>
+<p class="subj">Subject: <b>Founder to founder, no collab ask</b></p>
+<div class="msg" id="t6">Hiya Thomas,
+
+Kade Dillon, founder of Nexley. 13 years in construction before building it, an AI employee that runs the back office for trade businesses over WhatsApp.
+
+Not a collab pitch, I know the channel's in a new chapter. This is founder to founder: if the admin side of Thomas Nagy Ltd ever needs an extra pair of hands that isn't a hire, I'd genuinely like to show you it running on your real jobs. And if there's ever a story in it for whatever you build next, even better.
+
+Either way, respect for what you built on that channel.
+
+Kade
+nexley.ai</div>
+<button class="copy" data-t="t6">Copy</button><a class="mailbtn" href="mailto:info@thomasnagy.uk?subject=Founder%20to%20founder%2C%20no%20collab%20ask">Open email ↗</a></details></div>
+
+<h3 class="sect">VERTICAL TRADE PRESS</h3>
+
+<div class="target"><h2>Professional Builder <span class="tag best">BIGGEST REACH</span></h2>
+<p class="angle">Hamerville's flagship: 110,000+ free copies a month through ~3,000 merchant counters, the classic van-at-the-merchant read. Editor Lee Jones. Our exact ICP at maximum reach. (Hamerville also publishes Professional Electrician and PHPI below, same office, so space the three sends out.)</p>
+<div class="links"><a href="https://probuildermag.co.uk" target="_blank" rel="noopener">Site ↗</a><a href="https://hamerville.co.uk/magazines/professional-builder" target="_blank" rel="noopener">Publisher / contacts ↗</a></div>
+<details><summary>Email — Lee Jones (ljones@hamerville.co.uk)</summary>
+<p class="subj">Subject: <b>Feature: the £14,000 his accountant never found</b></p>
+<div class="msg" id="t7">Hiya Lee,
+
+Kade Dillon, founder of Nexley, an AI employee that runs the back office for UK trade businesses over WhatsApp. 13 years in construction before I built it.
+
+For your business pages: the story of what builders are quietly handing to AI. One client found fourteen grand owed back on VAT from a single voice note. Others have caught tax bills before they landed, and across the client base we see an accountant fired a week. Your readers are exactly these firms, and the piece writes itself plain: what to hand over, what never to hand over, and the real numbers.
+
+One-off feature or a short regular business column, whichever serves the magazine. Happy to supply copy to length, with images.
+
+Worth a look?
+
+Kade
+nexley.ai</div>
+<button class="copy" data-t="t7">Copy</button><a class="mailbtn" href="mailto:ljones@hamerville.co.uk?subject=Feature%3A%20the%20%C2%A314%2C000%20his%20accountant%20never%20found">Open email ↗</a></details></div>
+
+<div class="target"><h2>Professional Electrician &amp; Installer</h2>
+<p class="angle">Hamerville's electrical title, ABC-audited 81,413 through 2,000+ wholesaler counters. Editor Richard Bowler. They've profiled trade creators and business tools before; the angle is the admin hours sparks never invoice.</p>
+<div class="links"><a href="https://professional-electrician.com" target="_blank" rel="noopener">Site ↗</a><a href="https://hamerville.co.uk/magazines/professional-electrician-installer" target="_blank" rel="noopener">Publisher / contacts ↗</a></div>
+<details><summary>Email — Richard Bowler (pe@hamerville.co.uk)</summary>
+<p class="subj">Subject: <b>The admin hours sparks never invoice</b></p>
+<div class="msg" id="t8">Hiya Richard,
+
+Kade Dillon, founder of Nexley, an AI employee that runs the back office for UK trade businesses over WhatsApp. 13 years in construction before building it.
+
+The feature I'd pitch: the hours electricians lose between jobs, quoting, invoicing, chasing money, the CIS position, and what happens when a machine takes them. Electricians are among our heaviest users, so I can anchor it in a real spark's before-and-after with honest numbers, including where the AI still falls short.
+
+Written plain to your length, with images, or your team can interview me and the client.
+
+Would that fit an issue?
+
+Kade
+nexley.ai</div>
+<button class="copy" data-t="t8">Copy</button><a class="mailbtn" href="mailto:pe@hamerville.co.uk?subject=The%20admin%20hours%20sparks%20never%20invoice">Open email ↗</a></details></div>
+
+<div class="target"><h2>Installer</h2>
+<p class="angle">Digital-first hub for heating, plumbing and renewables installers; sister brand of InstallerSHOW at the NEC (Nineteen Group). Executive editor Stuart Duff, head of content Joe Sharpe. Exact editorial email is published but obscured on their page, so send via the contact page. Eyes on an InstallerSHOW presence later.</p>
+<div class="links"><a href="https://www.installeronline.co.uk" target="_blank" rel="noopener">Site ↗</a><a href="https://www.installeronline.co.uk/about-us/contact-us/" target="_blank" rel="noopener">Contact ↗</a><a href="https://www.installershow.com" target="_blank" rel="noopener">InstallerSHOW ↗</a></div>
+<details><summary>Message — via the contact page, for Stuart Duff / Joe Sharpe</summary>
+<p class="subj">Subject: <b>Piece for Installer: AI built for the trade vs AI hype</b></p>
+<div class="msg" id="t9">Hiya Stuart, hiya Joe,
+
+Kade Dillon, founder of Nexley, an AI employee that runs the back office for UK trade businesses over WhatsApp. 13 years in construction before I built it.
+
+Installer is where the trade's tech conversation actually happens, so I'd like to write you the honest version of the AI one: what a heating firm can hand over today (quoting, invoicing, chasing payment by voice note), what it shouldn't, and the real client numbers behind it, an accountant fired a week, fourteen grand of VAT found in one message.
+
+Opinion piece or feature, your call on length. And if it lands well, I'd love to talk about being part of the InstallerSHOW conversation next year.
+
+Kade
+nexley.ai</div>
+<button class="copy" data-t="t9">Copy</button></details></div>
+
+<div class="target"><h2>PHPI</h2>
+<p class="angle">Hamerville's heating and plumbing title, ABC-audited 51,733 via ~2,000 plumbers' merchants. Editor Jonathan Cole. Angle: chasing payment and quoting by voice note, told through a plumbing client's real numbers.</p>
+<div class="links"><a href="https://phpionline.co.uk" target="_blank" rel="noopener">Site ↗</a><a href="https://hamerville.co.uk/magazines/professional-heating-plumbing-installer" target="_blank" rel="noopener">Publisher / contacts ↗</a></div>
+<details><summary>Email — Jonathan Cole (phpi@hamerville.co.uk)</summary>
+<p class="subj">Subject: <b>Quoting by voice note: a working plumber's numbers</b></p>
+<div class="msg" id="t10">Hiya Jonathan,
+
+Kade Dillon, founder of Nexley, an AI employee that runs the back office for UK trade businesses over WhatsApp. 13 years in construction before building it.
+
+For your business pages: a working heating engineer's before-and-after. Quotes built from a voice note on the drive home, invoices out the same day, payment chased without the awkward phone call, and the VAT position checked before it bites. One client found fourteen grand owed back from a single message. Honest section on the limits included, because your readers can smell hype a mile off.
+
+Supplied to length with images, or an interview if you'd rather. Would it fit?
+
+Kade
+nexley.ai</div>
+<button class="copy" data-t="t10">Copy</button><a class="mailbtn" href="mailto:phpi@hamerville.co.uk?subject=Quoting%20by%20voice%20note%3A%20a%20working%20plumber%27s%20numbers">Open email ↗</a></details></div>
+
+<div class="target"><h2>Roofing Today</h2>
+<p class="angle">The roofing trade's magazine and daily news site (25k combined circulation). Editor Dr Claire Griffiths, email published. Roofing has almost no AI coverage, so a grounded first-mover story stands out.</p>
+<div class="links"><a href="https://roofingtoday.co.uk" target="_blank" rel="noopener">Site ↗</a><a href="https://roofingtoday.co.uk/contact/" target="_blank" rel="noopener">Contact ↗</a><a href="https://www.facebook.com/RoofingTodayMagazine" target="_blank" rel="noopener">Facebook ↗</a></div>
+<details><summary>Email — Claire Griffiths (editor@roofingtoday.co.uk)</summary>
+<p class="subj">Subject: <b>Roofing's first AI back office story</b></p>
+<div class="msg" id="t11">Hiya Claire,
+
+Kade Dillon, founder of Nexley, an AI employee that runs the back office for UK trade businesses over WhatsApp. 13 years in construction before I built it.
+
+Roofing might be the least-covered trade in the AI conversation, which makes it the best story: firms running the office from the scaffold, quotes and invoices handled by voice note, payment chased while the lads are on the roof. I can bring real client numbers (across our base we see an accountant fired a week, and one client found fourteen grand owed back on VAT) and an honest account of the limits.
+
+News piece or business feature, supplied to your length. Interested?
+
+Kade
+nexley.ai</div>
+<button class="copy" data-t="t11">Copy</button><a class="mailbtn" href="mailto:editor@roofingtoday.co.uk?subject=Roofing%27s%20first%20AI%20back%20office%20story">Open email ↗</a></details></div>
+
+<div class="target"><h2>ACR Journal</h2>
+<p class="angle">The HVACR trade journal (Warners Group), with companion title Heat Pumps Today. Editor Andrew Slater is a former LG senior engineer, so the anti-hype technical framing suits him. Angle: heat pump firms scaling faster than their paperwork.</p>
+<div class="links"><a href="https://www.acrjournal.uk" target="_blank" rel="noopener">Site ↗</a><a href="https://www.warnersgroup.co.uk/building-construction/acr-journal/" target="_blank" rel="noopener">Publisher / contacts ↗</a><a href="https://www.facebook.com/ACRJournal" target="_blank" rel="noopener">Facebook ↗</a></div>
+<details><summary>Email — Andrew Slater (acr.editor@warnersgroup.co.uk)</summary>
+<p class="subj">Subject: <b>Heat pump firms are scaling faster than their paperwork</b></p>
+<div class="msg" id="t12">Hiya Andrew,
+
+Kade Dillon, founder of Nexley, an AI employee that runs the back office for UK trade businesses over WhatsApp. 13 years in construction before building it.
+
+For ACR or Heat Pumps Today: thousands of small installers are scaling into heat pumps with no back office behind them, and the paperwork is where the wheels come off, quotes, MCS admin, invoicing, chasing payment. The piece I'd write is technical-honest rather than hype: exactly what an AI employee does with that workload today, what it can't do, and the real numbers from firms using one.
+
+Given your engineering background I'd rather over-explain the mechanism than oversell it. Supplied to length with images. Would it fit?
+
+Kade
+nexley.ai</div>
+<button class="copy" data-t="t12">Copy</button><a class="mailbtn" href="mailto:acr.editor@warnersgroup.co.uk?subject=Heat%20pump%20firms%20are%20scaling%20faster%20than%20their%20paperwork">Open email ↗</a></details></div>
+
+<div class="target"><h2>HVR <span class="tag">LOWER PRIORITY</span></h2>
+<p class="angle">Heating &amp; Ventilating Review (Datateam), commercial and industrial HVAC, more corporate than one-van. Editor listed as Heather Ramsden (also linked to sister title BSEE, so confirm in the reply). Send after ACR Journal.</p>
+<div class="links"><a href="https://www.heatingandventilating.net" target="_blank" rel="noopener">Site ↗</a><a href="http://www.heatingandventilating.net/the-team" target="_blank" rel="noopener">Team ↗</a></div>
+<details><summary>Email — Heather Ramsden (hramsden@datateam.co.uk)</summary>
+<p class="subj">Subject: <b>SME contractors are automating the office. A piece for HVR?</b></p>
+<div class="msg" id="t13">Hiya Heather,
+
+Kade Dillon, founder of Nexley, an AI employee that runs the back office for UK trade businesses over WhatsApp. 13 years in construction before I built it.
+
+For HVR's readers: the contractor firms underneath the big commercial jobs are quietly automating their admin, quoting, invoicing, payment chasing, and it's changing what a lean firm can take on. I can bring real client numbers and an honest account of the limits, written plain to your length.
+
+If HVR isn't the right home for it, no bother, and apologies if you're wearing the BSEE hat these days.
+
+Kade
+nexley.ai</div>
+<button class="copy" data-t="t13">Copy</button><a class="mailbtn" href="mailto:hramsden@datateam.co.uk?subject=SME%20contractors%20are%20automating%20the%20office.%20A%20piece%20for%20HVR%3F">Open email ↗</a></details></div>
+
+<div class="target"><h2>Pro Landscaper</h2>
+<p class="angle">The leading B2B landscaping monthly (Eljays44), direct-mailed to 5,000+ professionals, plus FutureScape and their business awards. Editor Rachael Forsyth (no direct email published, general inbox marked for her). Landscapers are multi-client operators, squarely our ICP.</p>
+<div class="links"><a href="https://www.prolandscapermagazine.com" target="_blank" rel="noopener">Site ↗</a><a href="https://www.instagram.com/prolandscaper" target="_blank" rel="noopener">Instagram ↗</a><a href="https://www.facebook.com/prolandscapermagazine" target="_blank" rel="noopener">Facebook ↗</a></div>
+<details><summary>Email — for Rachael Forsyth (info@eljays44.com)</summary>
+<p class="subj">Subject: <b>For Rachael Forsyth: landscapers' evenings, given back</b></p>
+<div class="msg" id="t14">Hiya team, one for Rachael please.
+
+Kade Dillon, founder of Nexley, an AI employee that runs the back office for UK trade businesses over WhatsApp. 13 years in construction before building it.
+
+The business feature I'd pitch: landscaping firms juggle more quotes per week than almost any trade, and the evenings go on paperwork. What changes when the quoting, invoicing and chasing run themselves from voice notes: real client numbers, honest limits, practical detail your readers can act on either way.
+
+Supplied to length with images, or an interview format if that suits the magazine better.
+
+Worth a slot?
+
+Kade
+nexley.ai</div>
+<button class="copy" data-t="t14">Copy</button><a class="mailbtn" href="mailto:info@eljays44.com?subject=For%20Rachael%20Forsyth%3A%20landscapers%27%20evenings%2C%20given%20back">Open email ↗</a></details></div>
+
+<div class="target"><h2>ScaffMag <span class="tag best">FAST YES</span></h2>
+<p class="angle">The scaffolding industry's news platform, founded by Daniel Norton, an ex-CISRS scaffolder turned publisher. Owner-editor, ex-trade: the founder story lands person-to-person, and scaffolding is drowning in paperwork (CITB, contracts, invoicing).</p>
+<div class="links"><a href="https://scaffmag.com" target="_blank" rel="noopener">Site ↗</a><a href="https://www.instagram.com/scaff_mag" target="_blank" rel="noopener">Instagram ↗</a><a href="https://www.facebook.com/scaffmag" target="_blank" rel="noopener">Facebook ↗</a></div>
+<details><summary>Email — Daniel Norton (dan@scaffmag.com)</summary>
+<p class="subj">Subject: <b>One founder off the tools to another</b></p>
+<div class="msg" id="t15">Hiya Dan,
+
+Kade Dillon, founder of Nexley. You went from the scaffold to building the industry's news platform; I went from 13 years in construction to building an AI employee that runs a trade firm's back office over WhatsApp. Figured that story might interest you both ways.
+
+For ScaffMag: scaffolding firms carry more paperwork per job than almost anyone, contracts, CITB, invoicing, chasing retention money. I can give you the real numbers on what happens when that goes to a machine (an accountant fired a week across our clients, fourteen grand of VAT found from one voice note) and I'm happy to be interviewed properly rather than puff-pieced.
+
+Fancy it?
+
+Kade
+nexley.ai</div>
+<button class="copy" data-t="t15">Copy</button><a class="mailbtn" href="mailto:dan@scaffmag.com?subject=One%20founder%20off%20the%20tools%20to%20another">Open email ↗</a></details></div>
+
+<div class="target"><h2>Demolition Hub <span class="tag best">FAST YES</span></h2>
+<p class="angle">Bimonthly demolition magazine from owner-publisher Ben Chambers; 80 pages to 5,000 named contractors, NFDC media partner, plus Demolition Hub TV. Small niche, owner-run, well-packaged stories get accepted, with a TV segment possible.</p>
+<div class="links"><a href="https://www.demolitionhub.com" target="_blank" rel="noopener">Site ↗</a><a href="https://www.instagram.com/demolition_hub" target="_blank" rel="noopener">Instagram ↗</a><a href="https://www.youtube.com/channel/UCeEd5O1nVRSnW8Dom9boh2Q" target="_blank" rel="noopener">Hub TV ↗</a></div>
+<details><summary>Email — Ben Chambers (demolition@chambers.media)</summary>
+<p class="subj">Subject: <b>A tech story for the Hub, TV segment included if you want it</b></p>
+<div class="msg" id="t16">Hiya Ben,
+
+Kade Dillon, founder of Nexley, an AI employee that runs the back office for UK trade businesses over WhatsApp. 13 years in construction before I built it.
+
+For the magazine: demolition contractors run heavy paperwork, contracts, invoicing, compliance, chasing payment, and AI has barely been covered in the sector. I can give you a properly packaged feature: real client numbers (an accountant fired a week across our base), what firms hand over first, and the honest limits. Happy to do it as an interview, and if it suits Demolition Hub TV I'll turn up on camera and take the hard questions.
+
+Want it for an upcoming issue?
+
+Kade
+nexley.ai</div>
+<button class="copy" data-t="t16">Copy</button><a class="mailbtn" href="mailto:demolition@chambers.media?subject=A%20tech%20story%20for%20the%20Hub%2C%20TV%20segment%20included%20if%20you%20want%20it">Open email ↗</a></details></div>
+
+<div class="target"><h2>Executive Hire News</h2>
+<p class="angle">The tool and plant hire industry's magazine (Hemming Group), organiser of the Executive Hire Show. Hire desks are a back-office-heavy world: contracts, invoicing, chasing. Editor Andy McVittie; Innovation Trail culture means genuinely useful product stories fit.</p>
+<div class="links"><a href="https://www.executivehirenews.co.uk" target="_blank" rel="noopener">Site ↗</a><a href="https://www.executivehirenews.co.uk/contact-us/" target="_blank" rel="noopener">Contact ↗</a><a href="https://www.executivehireshow.co.uk" target="_blank" rel="noopener">Hire Show ↗</a></div>
+<details><summary>Email — Andy McVittie (a.mcvittie@hgluk.com)</summary>
+<p class="subj">Subject: <b>Hire desks without the paper chase</b></p>
+<div class="msg" id="t17">Hiya Andy,
+
+Kade Dillon, founder of Nexley, an AI employee that runs the back office for UK trade businesses over WhatsApp. 13 years in construction before building it.
+
+For EHN: hire is one of the most back-office-heavy corners of the industry, contracts out, invoices chased, queries answered, and the firms hiring the kit out are automating exactly that. The piece I'd offer: what an AI employee does with a hire desk's admin today, real numbers from trade firms using one, and the limits stated plainly, no hype.
+
+News item or longer innovation feature, your call, supplied to length. And if it earns a look for the Innovation Trail down the line, even better.
+
+Kade
+nexley.ai</div>
+<button class="copy" data-t="t17">Copy</button><a class="mailbtn" href="mailto:a.mcvittie@hgluk.com?subject=Hire%20desks%20without%20the%20paper%20chase">Open email ↗</a></details></div>
+
+</div>
 <script>
 document.querySelectorAll('button.copy').forEach(function(b){
   b.addEventListener('click', function(){
@@ -280,3 +468,4 @@ document.querySelectorAll('button.copy').forEach(function(b){
   });
 });
 </script>
+</body></html>
